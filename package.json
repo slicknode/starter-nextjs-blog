@@ -1,0 +1,23 @@
+{
+  "name": "starter-nextjs-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/slicknode/starter-nextjs-blog.git",
+  "author": "Slicknode LLC",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^9.5.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "dev": "next dev src",
+    "build": "npm run clean && next build src",
+    "clean": "rimraf dist && rimraf export",
+    "export": "npm run clean && npm run build && next export src -o ./export",
+    "start": "next start src"
+  }
+}
