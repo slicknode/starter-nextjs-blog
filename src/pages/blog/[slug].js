@@ -3,6 +3,7 @@ import {DefaultLayout} from '../../components/default-layout';
 import {gql} from 'graphql-request';
 import {getClient} from '../../client';
 import {Markdown} from '../../components/markdown';
+import styles from './[slug].module.scss';
 
 const BLOG_POST_PAGE_QUERY = gql`
   query BlogPostPageQuery($slug: String!) {
@@ -10,9 +11,13 @@ const BLOG_POST_PAGE_QUERY = gql`
       title
       teaser
       text
+      category {
+        name
+      }
       image {
         url(width: 740)
       }
+      createdAt
     }
   }
 `
@@ -74,6 +79,12 @@ const BlogPostPage = (props) => {
 
   return (
     <DefaultLayout>
+      {post.category && (<span className={styles.category}>
+        {post.category.name}
+      </span>)}
+      <span className={styles.date}>
+        {new Intl.DateTimeFormat('en-US').format(new Date(post.createdAt))}
+      </span>
       <h1>
         {post.title}
       </h1>

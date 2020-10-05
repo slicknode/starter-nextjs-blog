@@ -6,11 +6,20 @@ html {
 }
 
 body {
-  background-color: #eaeaea;
+  background-color: #f5f5f5;
+  line-height: 1.5em;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+a {
+  color: #1bbaf2;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 figure {

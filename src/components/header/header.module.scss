@@ -10,3 +10,18 @@
   padding: 30px;
   border-bottom: #eaeaea 1px solid;
 }
+
+
+.menu {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+
+  li {
+    float: left;
+  }
+  li + li {
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,29 @@
+.customizeList {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  margin: 0 -15px;
+
+  li {
+    width: 50%;
+    background-color: #f5f5f5;
+    border-color: #eaeaea;
+    float: left;
+    padding: 15px;
+    margin: 15px;
+    font-size: 14px;
+
+    h4 {
+      font-size: 18px;
+      margin: 5px 0;
+    }
+
+    a {
+      display: inline-block;
+      background-color: #1bbaf2;
+      color: #fff;
+      padding: 2px 15px;
+    }
+  }
+}

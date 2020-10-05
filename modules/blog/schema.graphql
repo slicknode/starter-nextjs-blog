@@ -29,7 +29,7 @@ Blog post category
 type Blog_Category implements Node & Content {
   id: ID!
 
-  title: String!
+  name: String
   slug: String! @unique
 
   posts: [Blog_Post!]! @relation(
