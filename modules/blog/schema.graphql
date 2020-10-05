@@ -1,0 +1,48 @@
+"""
+Blog post
+"""
+type Blog_Post implements Node & Content @autocomplete(fields: ["title"]) {
+  id: ID!
+
+  title: String!
+  teaser: String @input(type: TEXTAREA)
+  slug: String @unique
+  image: Image
+
+  text: String @input(type: MARKDOWN)
+  category: Blog_Category!
+
+  locale: Locale!
+  status: ContentStatus!
+  createdAt: DateTime!
+  createdBy: User
+  lastUpdatedAt: DateTime
+  lastUpdatedBy: User
+  publishedAt: DateTime
+  publishedBy: User
+  contentNode: ContentNode!
+}
+
+"""
+Blog post category
+"""
+type Blog_Category implements Node & Content {
+  id: ID!
+
+  title: String!
+  slug: String! @unique
+
+  posts: [Blog_Post!]! @relation(
+    path: "Blog_Category=category.Blog_Post"
+  )
+
+  locale: Locale!
+  status: ContentStatus!
+  createdAt: DateTime!
+  createdBy: User
+  lastUpdatedAt: DateTime
+  lastUpdatedBy: User
+  publishedAt: DateTime
+  publishedBy: User
+  contentNode: ContentNode!
+}

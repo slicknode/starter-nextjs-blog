@@ -1,0 +1,13 @@
+query Blog_PostPermission1 {
+  scope(role: ANONYMOUS, operations: [READ])
+}
+
+
+query Blog_PostPermission2 {
+  scope(role: STAFF, operations: [CREATE, UPDATE, DELETE])
+}
+
+
+query Blog_PostPermission3 {
+  scope(role: RUNTIME, operations: [CREATE, UPDATE, DELETE, READ])
+}
