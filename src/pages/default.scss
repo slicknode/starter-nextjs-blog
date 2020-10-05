@@ -1,16 +1,25 @@
 // Global base styles
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #eaeaea;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
+figure {
+  margin: 0;
+}
+
 h1 {
   text-align: center;
+  margin: 60px 0;
 }
 
 ol, ul {

@@ -7,7 +7,7 @@ export const Header = (props) => {
       <div className={styles.logo}>
         <Link href={'/'} passHref={true}>
           <a>
-            <img src="/img/logo.svg" alt="Slicknode, Headless GraphQL CMS Starter"/>
+            Home
           </a>
         </Link>
       </div>
