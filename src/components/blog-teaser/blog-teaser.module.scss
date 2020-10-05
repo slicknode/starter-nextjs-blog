@@ -1,6 +1,7 @@
 .teaser {
-  background-color: #F2FBFE;
+  // background-color: #F2FBFE;
   margin-bottom: 30px;
+  border: 1px solid #eaeaea;
   padding: 30px;
   display: flex;
   cursor: pointer;
@@ -11,7 +12,8 @@
   }
 
   &:hover {
-    background-color: #c8ecfa;
+    // background-color: #c8ecfa;
+    border: 1px solid #444;
   }
 }
 

@@ -1,4 +1,19 @@
 .footer {
   padding: 30px;
   border-top: 1px solid #eaeaea;
+  text-align: center;
+}
+
+.menu {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+
+  li {
+    float: left;
+  }
+  li + li {
+    margin-left: 10px;
+  }
 }
