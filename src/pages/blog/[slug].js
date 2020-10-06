@@ -4,6 +4,7 @@ import {gql} from 'graphql-request';
 import {getClient} from '../../client';
 import {Markdown} from '../../components/markdown';
 import styles from './[slug].module.scss';
+import Head from 'next/head';
 
 const BLOG_POST_PAGE_QUERY = gql`
   query BlogPostPageQuery($slug: String!) {
@@ -79,6 +80,9 @@ const BlogPostPage = (props) => {
 
   return (
     <DefaultLayout>
+      <Head>
+        <title>{post.title}</title>
+      </Head>
       {post.category && (<span className={styles.category}>
         {post.category.name}
       </span>)}
