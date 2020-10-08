@@ -5,41 +5,29 @@ This is a simple blog site to get you started with NextJS and Slicknode. It has 
 
 ## Installation
 
-Install the [Slicknode CLI](https://www.npmjs.com/package/slicknode) if you don't already have it installed on your computer:
-
-    npm install -g slicknode@latest
-
 Clone the repository and install all dependencies:
 
-    git clone https://github.com/slicknode/starter-nextjs-blog.git
     yarn
 
-Deploy the Slicknode project to the Slicknode cloud so you can add content to your blog with the Slicknode console. You need to enter your Slicknode credentials. If you don't have an account yet, you can [sign up for free here](https://slicknode.com).
+Then run the setup script:
 
-    slicknode deploy
+    yarn setup
 
-Open the Slicknode console and add a blog post:
+This will create a new Slicknode project with, GraphQL API and the GraphQL endpoint will be added to your local configuration. Just follow the instructions on the screen.
+You might be asked to enter your Slicknode credentials. If you don't have an account yet, you can [sign up for free here](https://slicknode.com).
 
-    slicknode console
-
-Now get the GraphQL endpoint of your Slicknode project:
-
-    slicknode endpoint
-
-Add the value to the file [src/.env](./src.env), for example:
-
-    NEXT_PUBLIC_SLICKNODE_ENDPOINT=https://api.us-east-1.aws.slicknode.com/v1/yourproject
-
-Start the local development server:
+Start the local development server and start hacking:
 
     yarn dev
-
-This starts the local dev server with hot reload etc. and you can start making changes. 
 
 
 # Customizing Data Model
 
-The Slicknode modules with the data model are located in [modules/](./modules/). To change and extend the data model, just open the schema file of the blog module [modules/blog/schema.graphql](./modules/blog/schema.graphql), add your changes and redeploy your
+Install the [Slicknode CLI](https://www.npmjs.com/package/slicknode) globally if you don't already have it installed on your computer:
+
+    npm install -g slicknode@latest
+
+The Slicknode modules with the data model are located in [modules/](./modules/). To change and extend the data model, open the schema file of the blog module [modules/blog/schema.graphql](./modules/blog/schema.graphql), add your changes and redeploy your
 project to the Slicknode cloud:
 
     slicknode deploy

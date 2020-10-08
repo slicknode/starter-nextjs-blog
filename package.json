@@ -15,13 +15,15 @@
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
-    "sass": "^1.26.11"
+    "sass": "^1.26.11",
+    "slicknode": "latest"
   },
   "scripts": {
     "dev": "next dev src",
     "build": "npm run clean && next build src",
     "clean": "rimraf dist && rimraf export",
     "export": "npm run clean && npm run build && next export src -o ./export",
+    "setup": "slicknode deploy && node scripts/setup.js",
     "start": "next start src"
   }
 }

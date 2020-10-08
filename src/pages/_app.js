@@ -1,4 +1,4 @@
-import './default.scss';
+import './app.scss';
 import Head from 'next/head';
 
 function SlicknodeApp({ Component, pageProps }) {
