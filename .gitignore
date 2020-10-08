@@ -1,5 +1,9 @@
 # Slicknode cache data
 .slicknode
+
+# Configured environments
+# Remove this from .gitignore, if you want to share the environments 
+# with other developers (recommended if you want to work with the same content)
 .slicknoderc
 
 # NodeJS modules, next build files
