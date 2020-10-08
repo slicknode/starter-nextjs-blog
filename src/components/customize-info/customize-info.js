@@ -13,7 +13,7 @@ export const CustomizeInfo = (props) => {
           <p>
             Manage the content, add blog posts and invite your team members in the Slicknode Console.
           </p>
-          <a href="https://slicknode.com/docs/data-modeling/introduction/" target="_blank">
+          <a href="https://console.slicknode.com" target="_blank">
             Open Console
           </a>
         </li>
