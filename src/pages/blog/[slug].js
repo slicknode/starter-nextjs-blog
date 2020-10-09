@@ -1,10 +1,10 @@
-import * as React from 'react';
-import {DefaultLayout} from '../../components/default-layout';
-import {gql} from 'graphql-request';
-import {getClient} from '../../client';
-import {Markdown} from '../../components/markdown';
-import styles from './[slug].module.scss';
-import Head from 'next/head';
+import * as React from "react";
+import { DefaultLayout } from "../../components/default-layout";
+import { gql } from "graphql-request";
+import { getClient } from "../../client";
+import { Markdown } from "../../components/markdown";
+import styles from "./[slug].module.scss";
+import Head from "next/head";
 
 const BLOG_POST_PAGE_QUERY = gql`
   query BlogPostPageQuery($slug: String!) {
@@ -21,9 +21,9 @@ const BLOG_POST_PAGE_QUERY = gql`
       createdAt
     }
   }
-`
+`;
 
-export async function getStaticProps({params}) {
+export async function getStaticProps({ params }) {
   const client = getClient();
   const data = await client.request(BLOG_POST_PAGE_QUERY, {
     slug: params.slug,
@@ -40,33 +40,35 @@ export async function getStaticPaths() {
   let hasNextPage = true;
   const paths = [];
   while (hasNextPage) {
-	  const data = await client.request(
-      gql`query BlogPostPathsQuery($after: String){
-	      posts: Blog_listPost(first: 300, after: $after) {
-		      pageInfo {
-			      hasNextPage
-			      endCursor
-		      }
-	        edges {
-	          node {
-	            slug
-	          }
-	        }
-	      }
-	    }`,
+    const data = await client.request(
+      gql`
+        query BlogPostPathsQuery($after: String) {
+          posts: Blog_listPost(first: 300, after: $after) {
+            pageInfo {
+              hasNextPage
+              endCursor
+            }
+            edges {
+              node {
+                slug
+              }
+            }
+          }
+        }
+      `,
       {
         after,
-      },
-	  );
-	  for (let edge of data.posts.edges) {
-	  	paths.push({
-			  params: {
-				  slug: edge.node.slug,
-			  },
-		  })
-	  }
-	  hasNextPage = data.posts.pageInfo.hasNextPage;
-	  after = data.posts.pageInfo.endCursor;
+      }
+    );
+    for (let edge of data.posts.edges) {
+      paths.push({
+        params: {
+          slug: edge.node.slug,
+        },
+      });
+    }
+    hasNextPage = data.posts.pageInfo.hasNextPage;
+    after = data.posts.pageInfo.endCursor;
   }
 
   return {
@@ -76,29 +78,27 @@ export async function getStaticPaths() {
 }
 
 const BlogPostPage = (props) => {
-  const {post} = props;
+  const { post } = props;
 
   return (
     <DefaultLayout>
       <Head>
         <title>{post.title}</title>
       </Head>
-      {post.category && (<span className={styles.category}>
-        {post.category.name}
-      </span>)}
+      {post.category && (
+        <span className={styles.category}>{post.category.name}</span>
+      )}
       <span className={styles.date}>
-        {new Intl.DateTimeFormat('en-US').format(new Date(post.createdAt))}
+        {new Intl.DateTimeFormat("en-US").format(new Date(post.createdAt))}
       </span>
-      <h1>
-        {post.title}
-      </h1>
+      <h1>{post.title}</h1>
       {post.image && (
         <figure>
-          <img src={post.image.url} alt={post.title}/>
+          <img src={post.image.url} alt={post.title} />
         </figure>
       )}
       <section>
-        <Markdown value={post.text}/>
+        <Markdown value={post.text} />
       </section>
     </DefaultLayout>
   );

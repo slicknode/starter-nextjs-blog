@@ -1,6 +1,6 @@
 # Slicknode NextJS Blog Starter
 
-This is a simple blog site to get you started with NextJS and Slicknode. It has a very minimal setup that you can easily customize and extend. 
+This is a simple blog site to get you started with [NextJS](https://nextjs.org) and [Slicknode](https://slicknode.com). It has a very minimal setup that you can easily customize and extend. 
 
 
 ## Installation
@@ -20,8 +20,10 @@ Start the local development server and start hacking:
 
     yarn dev
 
+For more information how to build NextJS applications, check out [the official NextJS docs](https://nextjs.org/docs).
 
-# Customizing Data Model
+
+## Customizing Data Model
 
 Install the [Slicknode CLI](https://www.npmjs.com/package/slicknode) globally if you don't already have it installed on your computer:
 
@@ -46,7 +48,7 @@ This will generate a static version of your site in the folder `export/`.
 
 ## Run Production Server
 
-If you need server-side rendering (for example for automatic rebuild of pages), first create a build and then start the server:
+If you need server-side rendering instead of static site export (for example for automatic rebuild of pages), first create a build and then start the server:
 
     yarn build
 
