@@ -10,7 +10,7 @@ export function getClient() {
 
   const endpoint = process.env.NEXT_PUBLIC_SLICKNODE_ENDPOINT;
   if (!endpoint) {
-    throw new Error('Env variable NEXT_PUBLIC_SLICKNODE_ENDPOINT not configured. Add the Slicknode endpoint to your src/.env file or set the env var for the process');
+    throw new Error('Env variable NEXT_PUBLIC_SLICKNODE_ENDPOINT not configured. Add the Slicknode endpoint to your src/.env file or run `yarn setup`');
   }
 
   const client = new GraphQLClient(
