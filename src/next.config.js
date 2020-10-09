@@ -1,3 +1,4 @@
 module.exports = {
-  distDir: '../dist/.next'
+  distDir: '../dist/.next',
+  trailingSlash: true,
 };
