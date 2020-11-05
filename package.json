@@ -19,11 +19,11 @@
     "slicknode": "latest"
   },
   "scripts": {
-    "dev": "next dev src",
-    "build": "npm run clean && next build src",
-    "clean": "rimraf dist && rimraf export",
-    "export": "npm run clean && npm run build && next export src -o ./export",
+    "dev": "next dev",
+    "build": "npm run clean && next build",
+    "clean": "rimraf out && rimraf export",
+    "export": "npm run clean && npm run build && next export",
     "setup": "slicknode deploy && node scripts/setup.js",
-    "start": "next start src"
+    "start": "next start"
   }
 }

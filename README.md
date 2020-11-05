@@ -43,7 +43,7 @@ To generate a static site export of your site to deploy to the web via S3, Netli
 
     yarn export
 
-This will generate a static version of your site in the folder `export/`.
+This will generate a static version of your site in the folder `out/`.
 
 
 ## Run Production Server

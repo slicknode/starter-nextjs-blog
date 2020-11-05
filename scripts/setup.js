@@ -12,9 +12,9 @@ const path = require('path');
     return;
   }
   const endpoint = stdout.trim();
-  console.log(`Adding GraphQL endpoint ${endpoint} to src/.env file`);
+  console.log(`Adding GraphQL endpoint ${endpoint} to /.env file`);
 
-  const envFile = path.resolve(path.join(__dirname, '../src/.env'));
+  const envFile = path.resolve(path.join(__dirname, '../.env'));
   let envFileContent = await readFile(envFile, 'utf8');
 
   const envVars = {
