@@ -2,7 +2,7 @@ import {GraphQLClient} from 'graphql-request';
 
 let cachedClient;
 
-export function getClient() {
+export function getClient(context) {
   // Check if client is cached
   if (cachedClient) {
     return cachedClient;
@@ -17,8 +17,8 @@ export function getClient() {
     endpoint,
     {
       headers: {
-        // Set preview / published mode via ENV var
-        'x-slicknode-preview': process.env.NEXT_PUBLIC_SLICKNODE_PREVIEW === '1' ? '1' : '0',
+        // Set preview / published mode via preview context
+        'x-slicknode-preview': context && context.preview ? '1' : '0',
       },
     },
   );

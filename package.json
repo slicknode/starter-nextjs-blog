@@ -9,7 +9,7 @@
     "graphql": "^15.3.0",
     "graphql-request": "^3.1.0",
     "markdown-it": "^11.0.1",
-    "next": "^9.5.3",
+    "next": "^10.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
@@ -19,11 +19,11 @@
     "slicknode": "latest"
   },
   "scripts": {
-    "dev": "next dev src",
-    "build": "npm run clean && next build src",
-    "clean": "rimraf dist && rimraf export",
-    "export": "npm run clean && npm run build && next export src -o ./export",
+    "dev": "next dev",
+    "build": "npm run clean && next build",
+    "clean": "rimraf out && rimraf export",
+    "export": "npm run clean && npm run build && next export",
     "setup": "slicknode deploy && node scripts/setup.js",
-    "start": "next start src"
+    "start": "next start"
   }
 }

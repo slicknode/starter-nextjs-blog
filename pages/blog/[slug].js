@@ -23,18 +23,20 @@ const BLOG_POST_PAGE_QUERY = gql`
   }
 `;
 
-export async function getStaticProps({ params }) {
-  const client = getClient();
+export async function getStaticProps(context) {
+  const { params } = context;
+  const client = getClient(context);
   const data = await client.request(BLOG_POST_PAGE_QUERY, {
     slug: params.slug,
   });
   return {
     props: data,
+    revalidate: 10, // Refetch content every 10 secs
   };
 }
 
-export async function getStaticPaths() {
-  const client = getClient();
+export async function getStaticPaths(context) {
+  const client = getClient(context);
 
   let after = null;
   let hasNextPage = true;

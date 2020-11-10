@@ -23,13 +23,14 @@ const INDEX_PAGE_QUERY = gql`
   ${BlogTeaserFragments.post}
 `;
 
-export async function getStaticProps() {
-  const client = getClient();
+export async function getStaticProps(context) {
+  const client = getClient(context);
   const data = await client.request(INDEX_PAGE_QUERY, {
     limit: POSTS_PER_PAGE,
   });
   return {
     props: data,
+    revalidate: 1, // Refetch content every sec
   };
 }
 

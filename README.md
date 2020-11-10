@@ -37,13 +37,27 @@ project to the Slicknode cloud:
 Check out the [Slicknode documentation](https://slicknode.com/docs/data-modeling/introduction/) for more information on how to model your data, create your own modules, etc.
 
 
+## Preview Mode
+
+To load content in preview mode, visit the URL `/api/preview` in your browser. This will set a cookie and enable
+the preview mode for the duration of the browser session. The Slicknode API will then return all content from the
+preview stage. 
+
+**Securing Preview Mode:**
+
+To secure the preview mode, set a secret via the env variable `PREVIEW_SECRET_TOKEN` in the process that runs the
+server. ([See the next.js docs](https://nextjs.org/docs/basic-features/environment-variables)) 
+
+With the `PREVIEW_SECRET_TOKEN` set, you have to pass the secret to the preview URL to enable the preview mode. For example: `/api/preview?secret=xyz123`.
+
+
 ## Static Site Export
 
 To generate a static site export of your site to deploy to the web via S3, Netlify etc:
 
     yarn export
 
-This will generate a static version of your site in the folder `export/`.
+This will generate a static version of your site in the folder `out/`.
 
 
 ## Run Production Server

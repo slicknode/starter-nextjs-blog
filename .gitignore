@@ -8,8 +8,7 @@
 
 # NodeJS modules, next build files
 node_modules
-/export
-/dist
+/out
 .next
 
 # local env files
@@ -20,3 +19,4 @@ node_modules
 
 # Other system files
 .DS_Store
+.idea
