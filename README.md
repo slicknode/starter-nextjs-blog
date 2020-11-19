@@ -7,18 +7,18 @@ This is a simple blog site to get you started with [NextJS](https://nextjs.org) 
 
 Clone the repository and install all dependencies:
 
-    yarn
+    npm install
 
 Then run the setup script:
 
-    yarn setup
+    npm run setup
 
 This will create a new Slicknode project with, GraphQL API and the GraphQL endpoint will be added to your local configuration. Just follow the instructions on the screen.
 You might be asked to enter your Slicknode credentials. If you don't have an account yet, you can [sign up for free here](https://slicknode.com).
 
 Start the local development server and start hacking:
 
-    yarn dev
+    npm run dev
 
 For more information how to build NextJS applications, check out [the official NextJS docs](https://nextjs.org/docs).
 
@@ -55,7 +55,7 @@ With the `PREVIEW_SECRET_TOKEN` set, you have to pass the secret to the preview 
 
 To generate a static site export of your site to deploy to the web via S3, Netlify etc:
 
-    yarn export
+    npm run export
 
 This will generate a static version of your site in the folder `out/`.
 
@@ -64,8 +64,8 @@ This will generate a static version of your site in the folder `out/`.
 
 If you need server-side rendering instead of static site export (for example for automatic rebuild of pages), first create a build and then start the server:
 
-    yarn build
+    npm run build
 
 Start web server:
 
-    yarn start
+    npm start
