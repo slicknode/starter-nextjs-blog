@@ -16,7 +16,7 @@
   "devDependencies": {
     "rimraf": "^3.0.2",
     "sass": "^1.26.11",
-    "slicknode": "latest"
+    "slicknode": "^0.10.1"
   },
   "scripts": {
     "dev": "next dev",

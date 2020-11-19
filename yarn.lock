@@ -1058,6 +1058,10 @@
   version "10.17.38"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.38.tgz#951dc5ba517af0381bd8134636f93bcd93ae3e1b"
 
+"@types/node@^14.14.8":
+  version "14.14.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.8.tgz#2127bd81949a95c8b7d3240f3254352d72563aec"
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
@@ -1973,7 +1977,7 @@ colors@^1.1.2:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.4.0.tgz#c50491479d4c1bdaed2c9ced32cf7c7dc2360f78"
 
-combined-stream@^1.0.5, combined-stream@^1.0.8:
+combined-stream@^1.0.5, combined-stream@^1.0.6, combined-stream@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/combined-stream/-/combined-stream-1.0.8.tgz#c3d45a8b34fd730631a110a8a2520682b31d5a7f"
   dependencies:
@@ -2807,6 +2811,14 @@ form-data@^1.0.0-rc3:
     combined-stream "^1.0.5"
     mime-types "^2.1.11"
 
+form-data@^2.3.2:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-2.5.1.tgz#f2cbec57b5e59e23716e128fe44d4e5dd23895f4"
+  dependencies:
+    asynckit "^0.4.0"
+    combined-stream "^1.0.6"
+    mime-types "^2.1.12"
+
 form-data@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/form-data/-/form-data-3.0.0.tgz#31b7e39c85f1355b7139ee0c647cf0de7f83c682"
@@ -3435,11 +3447,24 @@ isomorphic-fetch@^2.2.1:
     node-fetch "^1.0.1"
     whatwg-fetch ">=0.10.0"
 
+isomorphic-fetch@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-3.0.0.tgz#0267b005049046d2421207215d45d6a262b8b8b4"
+  dependencies:
+    node-fetch "^2.6.1"
+    whatwg-fetch "^3.4.1"
+
 isomorphic-form-data@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/isomorphic-form-data/-/isomorphic-form-data-1.0.0.tgz#0447be7e0f6b86def3d393036cf7664a98919100"
   dependencies:
     form-data "^1.0.0-rc3"
+
+isomorphic-form-data@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/isomorphic-form-data/-/isomorphic-form-data-2.0.0.tgz#9f6adf1c4c61ae3aefd8f110ab60fb9b143d6cec"
+  dependencies:
+    form-data "^2.3.2"
 
 iterall@^1.1.3, iterall@^1.2.2:
   version "1.3.0"
@@ -4105,7 +4130,7 @@ node-fetch@2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
 
-node-fetch@2.6.1, node-fetch@^2.2.0:
+node-fetch@2.6.1, node-fetch@^2.2.0, node-fetch@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
 
@@ -5066,13 +5091,21 @@ slicknode-client@^0.2.2:
     isomorphic-fetch "^2.2.1"
     isomorphic-form-data "^1.0.0"
 
+slicknode-client@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/slicknode-client/-/slicknode-client-0.4.1.tgz#6d8b8651c96b9f7630eb0faa728534360ff9e5c3"
+  dependencies:
+    "@types/node" "^14.14.8"
+    isomorphic-fetch "^3.0.0"
+    isomorphic-form-data "^2.0.0"
+
 slicknode-runtime@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/slicknode-runtime/-/slicknode-runtime-0.2.0.tgz#907c262df36015cb4d79222991cf6a4fcd9b1c20"
 
-slicknode@latest:
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/slicknode/-/slicknode-0.9.1.tgz#748c483809d4b5dfe9056cee2683b920490d1a76"
+slicknode@^0.10.1:
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/slicknode/-/slicknode-0.10.1.tgz#0e4bfefe08cd5c0981c0ded92e9722ce0b6a924a"
   dependencies:
     "@oclif/command" "^1"
     "@oclif/config" "^1"
@@ -5089,7 +5122,7 @@ slicknode@latest:
     graphql-tools "^4.0.5"
     indent-string "^4.0.0"
     inquirer "^6.2.0"
-    isomorphic-fetch "^2.2.1"
+    isomorphic-fetch "^3.0.0"
     joi "^13.6.0"
     js-yaml "^3.12.0"
     listr "^0.14.3"
@@ -5098,7 +5131,7 @@ slicknode@latest:
     node-fetch "^2.2.0"
     rimraf "^2.6.3"
     slicknode-auth-email-password "^0.1.2"
-    slicknode-client "^0.2.2"
+    slicknode-client "^0.4.1"
     slicknode-runtime "^0.2.0"
     tar "^4.4.6"
     tslib "^1"
@@ -5813,6 +5846,10 @@ webpack@4.44.1:
 whatwg-fetch@>=0.10.0:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.4.1.tgz#e5f871572d6879663fa5674c8f833f15a8425ab3"
+
+whatwg-fetch@^3.4.1:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.5.0.tgz#605a2cd0a7146e5db141e29d1c62ab84c0c4c868"
 
 whatwg-url@^7.0.0:
   version "7.1.0"
