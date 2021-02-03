@@ -1,3 +1,7 @@
+/**
+ * Setup script to simplify set up of the Slicknode endpoint
+ * Can be removed if setup is not needed anymore.
+ */
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 const readFile = util.promisify(require('fs').readFile);
