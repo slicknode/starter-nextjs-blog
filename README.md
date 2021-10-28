@@ -1,7 +1,6 @@
 # Slicknode NextJS Blog Starter
 
-This is a simple blog site to get you started with [NextJS](https://nextjs.org) and [Slicknode](https://slicknode.com). It has a very minimal setup that you can easily customize and extend. 
-
+This is a simple blog site to get you started with [NextJS](https://nextjs.org) and [Slicknode](https://slicknode.com). It has a very minimal setup that you can easily customize and extend.
 
 ## Installation
 
@@ -14,14 +13,12 @@ Then run the setup script:
     npm run setup
 
 This will create a new Slicknode project with, GraphQL API and the GraphQL endpoint will be added to your local configuration. Just follow the instructions on the screen.
-You might be asked to enter your Slicknode credentials. If you don't have an account yet, you can [sign up for free here](https://slicknode.com).
 
 Start the local development server and start hacking:
 
     npm run dev
 
 For more information how to build NextJS applications, check out [the official NextJS docs](https://nextjs.org/docs).
-
 
 ## Customizing Data Model
 
@@ -36,20 +33,18 @@ project to the Slicknode cloud:
 
 Check out the [Slicknode documentation](https://slicknode.com/docs/data-modeling/introduction/) for more information on how to model your data, create your own modules, etc.
 
-
 ## Preview Mode
 
 To load content in preview mode, visit the URL `/api/preview` in your browser. This will set a cookie and enable
 the preview mode for the duration of the browser session. The Slicknode API will then return all content from the
-preview stage. 
+preview stage.
 
 **Securing Preview Mode:**
 
 To secure the preview mode, set a secret via the env variable `PREVIEW_SECRET_TOKEN` in the process that runs the
-server. ([See the next.js docs](https://nextjs.org/docs/basic-features/environment-variables)) 
+server. ([See the next.js docs](https://nextjs.org/docs/basic-features/environment-variables))
 
 With the `PREVIEW_SECRET_TOKEN` set, you have to pass the secret to the preview URL to enable the preview mode. For example: `/api/preview?secret=xyz123`.
-
 
 ## Static Site Export
 
@@ -58,7 +53,6 @@ To generate a static site export of your site to deploy to the web via S3, Netli
     npm run export
 
 This will generate a static version of your site in the folder `out/`.
-
 
 ## Run Production Server
 
