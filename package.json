@@ -6,17 +6,17 @@
   "author": "Slicknode LLC",
   "license": "MIT",
   "dependencies": {
-    "graphql": "^15.5.1",
-    "graphql-request": "^3.4.0",
-    "markdown-it": "^12.1.0",
-    "next": "^11.0.1",
+    "graphql": "^15.7.2",
+    "graphql-request": "^3.6.1",
+    "markdown-it": "^12.2.0",
+    "next": "^11.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
-    "sass": "^1.35.2",
-    "slicknode": "^0.13.0"
+    "sass": "^1.43.4",
+    "slicknode": "^0.14.0"
   },
   "scripts": {
     "dev": "next dev",
